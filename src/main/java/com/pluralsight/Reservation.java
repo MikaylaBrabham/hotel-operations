@@ -10,14 +10,15 @@ public class Reservation {
 
     //add constructors
     public Reservation(String roomType, double price, int numberOfNights, boolean isWeekend) {
-        this.roomType = roomType;
+        this.roomType = roomType.toLowerCase().trim();
         this.price = price;
         this.numberOfNights = numberOfNights;
-        this.isWeekend = isWeekend;
+        this.isWeekend = isWeekend = true;
     }
 
     //add get to stored constructors
-    public String getRoomType() {
+    public String getRoomType()  {
+        if (this.roomType = "king"){
             return roomType;
         }
     public double getPrice() {
