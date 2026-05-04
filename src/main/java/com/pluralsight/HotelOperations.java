@@ -45,6 +45,14 @@ private class Room {
     }
 //add Reservation class
 private class Reservation{
+        //add outlined classes
+    private String RoomType;
+    private double price;
+    private int numberOfNights;
+    private boolean weekend;
+    private double reservationTotal;
+
+    //add reservation constructors
 
 }
 //add Employee Class
