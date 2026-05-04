@@ -34,7 +34,6 @@ private class Room {
         public boolean isAvailable() {
             return available;
         }
-
         // add constructors empty ones
         public Room(double numberOfBeds, double price, boolean occupied, boolean dirty, boolean available) {
             NumberOfBeds = numberOfBeds;
