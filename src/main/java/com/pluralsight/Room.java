@@ -4,17 +4,17 @@ public class Room {
     //add variables and their data properties
     private int numberOfBeds;
     private double price;
-    private boolean isoccupied;
-    private boolean isdirty;
+    private boolean isOccupied;
+    private boolean isDirty;
 
 
 
     //get stored construtors
-    public Room(int numberOfBeds, double price, boolean isoccupied, boolean isdirty) {
+    public Room(int numberOfBeds, double price, boolean isOccupied, booleanisDirty) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
-        this.isoccupied = isoccupied;
-        this.isdirty = isdirty;
+        this.isOccupied= isOccupied;
+        this.isDirty = isDirty;
     }
 
 
@@ -27,18 +27,20 @@ public class Room {
         return price;
     }
 
-    public boolean isIsoccupied() {
-        return isoccupied;
+    public boolean isOccupied() {
+        return isOccupied;
     }
 
-    public boolean isIsdirty() {
-        return isdirty;
+    public boolean isDirty() {
+        return isDirty;
     }
 
 
 
     //add in derived getter
     public boolean isAvailable(){
+
+
 
     }
 }
