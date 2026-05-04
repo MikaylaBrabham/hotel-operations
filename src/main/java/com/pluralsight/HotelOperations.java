@@ -53,7 +53,17 @@ private class Reservation{
     private double reservationTotal;
 
     //add reservation constructors
+    public Reservation(String roomType, double price, int numberOfNights, boolean weekend, double reservationTotal) {
+        RoomType = roomType;
+        this.price = price;
+        this.numberOfNights = numberOfNights;
+        this.weekend = weekend;
+        this.reservationTotal = reservationTotal;
+    }
+    //add getters
 
+
+    //add setters
 }
 //add Employee Class
 private class Employee{
