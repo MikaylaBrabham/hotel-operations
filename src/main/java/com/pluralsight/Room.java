@@ -10,7 +10,7 @@ public class Room {
 
 
     //get stored construtors
-    public Room(int numberOfBeds, double price, boolean isOccupied, booleanisDirty) {
+    public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
         this.isOccupied= isOccupied;
@@ -39,6 +39,14 @@ public class Room {
 
     //add in derived getter
     public boolean isAvailable(){
+        //add rule if the room is dirty and occupied it's not available
+        // work with the data given and adapt
+        if (this.isDirty() && this.isOccupied()){
+            return false;
+        }
+        else {
+            return true;
+        }
 
 
 
