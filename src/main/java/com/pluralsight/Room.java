@@ -8,7 +8,6 @@ public class Room {
     private boolean isDirty;
 
 
-
     //get stored construtors
     public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
         this.numberOfBeds = numberOfBeds;
@@ -27,15 +26,9 @@ public class Room {
         return price;
     }
 
-    public boolean isOccupied() {
-        return isOccupied;
-    }
+    public boolean isOccupied() {return isOccupied; }
 
-    public boolean isDirty() {
-        return isDirty;
-    }
-
-
+    public boolean isDirty() {return isDirty;}
 
     //add in derived getter
     public boolean isAvailable(){
@@ -47,8 +40,6 @@ public class Room {
         else {
             return true;
         }
-
-
 
     }
 }
