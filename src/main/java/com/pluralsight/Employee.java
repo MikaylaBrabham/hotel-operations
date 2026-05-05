@@ -22,7 +22,6 @@ public class Employee {
 
 
 //add getters and setters for each stored
-
     public String getEmployeeID() {
         return employeeID;
     }
@@ -63,24 +62,33 @@ public class Employee {
         this.hoursWorked = hoursWorked;
     }
 
+
+
     //add regular hours
-    public double getRegularHours(double regularHours) {
+    public double getRegularHours(){
        if(this.hoursWorked <= 40){
-        } return regularHours;
-        }
+        return this.hoursWorked;
+        } return 40;
+}
+
 
     //add overtime hours
-    public double getOvertimeHours(double overtimeHours) {
-        if(this.hoursWorked >= 41){
-        } return overtimeHours;
+    public double getOvertimeHours() {
+        if(this.hoursWorked >= 40){
+            return this.hoursWorked - 40;
+        } return 0;
     }
 
-    // add  total pay derived getters
-    public void  getTotalPay(double totalPay) {
 
+    // add  total pay
+    public double getTotalPay() {
         //add regular pay
-
+        double regularHours = this.getRegularHours() * this.payRate;
         // add overtime pay
+        double overtimeHoursPay = this.getOvertimeHours() * this.payRate * 1.5;
+
+        return regularHours + overtimeHoursPay;
+        }
 
     }
-}
+
