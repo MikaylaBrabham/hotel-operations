@@ -50,19 +50,27 @@ public class Room {
 
     // add check in method
     private void checkIn() {
-
-    }
-
-
-    //add checkout method
-    private void CheckOut() {
+        //marked occupied: someones still in there
+        this.isOccupied = false;
+        //marked dirty
+        this.isDirty = false;
 
     }
 
     //add clean room method
     private void cleanRoom() {
-
+        // does the room need cleaning
+        this.isDirty = true;
     }
+
+    //add checkout method
+    private void CheckOut() {
+        // occupied = no
+        this.isOccupied = false;
+        //clean = yes
+        this.isDirty = true;
+    }
+
 }
 
 
