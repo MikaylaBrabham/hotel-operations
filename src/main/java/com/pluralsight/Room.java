@@ -12,7 +12,7 @@ public class Room {
     public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
-        this.isOccupied= isOccupied;
+        this.isOccupied = isOccupied;
         this.isDirty = isDirty;
     }
 
@@ -26,20 +26,41 @@ public class Room {
         return price;
     }
 
-    public boolean isOccupied() {return isOccupied; }
+    public boolean isOccupied() {
+        return isOccupied;
+    }
 
-    public boolean isDirty() {return isDirty;}
+    public boolean isDirty() {
+        return isDirty;
+    }
 
     //add in derived getter
-    public boolean isAvailable(){
+    public boolean isAvailable() {
         //add rule if the room is dirty and occupied it's not available
         // work with the data given and adapt
-        if (this.isDirty() && this.isOccupied()){
+        if (this.isDirty() && this.isOccupied()) {
             return false;
-        }
-        else {
+        } else {
             return true;
         }
+
+    }
+    //Exercise 2
+
+
+    // add check in method
+    private void checkIn() {
+
+    }
+
+
+    //add checkout method
+    private void CheckOut() {
+
+    }
+
+    //add clean room method
+    private void cleanRoom() {
 
     }
 }
