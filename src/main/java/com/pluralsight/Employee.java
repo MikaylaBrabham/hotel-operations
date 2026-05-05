@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 public class Employee {
+
 //added stored methods
     private String employeeID;
     private String name;
@@ -9,6 +10,56 @@ public class Employee {
     private double hoursWorked;
 
 
+//add constructors for each stored
+
+    public Employee(String employeeID, String name, String department, double payRate, double hoursWorked) {
+        this.employeeID = employeeID;
+        this.name = name;
+        this.department = department;
+        this.payRate = payRate;
+        this.hoursWorked = hoursWorked;
+    }
 
 
+//add getters and setters for each stored
+
+    public String getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(String employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public double getPayRate() {
+        return payRate;
+    }
+
+    public void setPayRate(double payRate) {
+        this.payRate = payRate;
+    }
+
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(double hoursWorked) {
+        this.hoursWorked = hoursWorked;
+    }
 }
