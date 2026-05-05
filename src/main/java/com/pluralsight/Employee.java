@@ -62,4 +62,25 @@ public class Employee {
     public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
+
+    //add regular hours
+    public double getRegularHours(double regularHours) {
+       if(this.hoursWorked <= 40){
+        } return regularHours;
+        }
+
+    //add overtime hours
+    public double getOvertimeHours(double overtimeHours) {
+        if(this.hoursWorked >= 41){
+        } return overtimeHours;
+    }
+
+    // add  total pay derived getters
+    public void  getTotalPay(double totalPay) {
+
+        //add regular pay
+
+        // add overtime pay
+
+    }
 }
