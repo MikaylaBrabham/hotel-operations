@@ -90,5 +90,25 @@ public class Employee {
         return regularHours + overtimeHoursPay;
         }
 
+
+        // exercise 2
+
+    //add in and define these new methods
+
+            //these are stored
+    // start time int private not void
+    // end time int private not void
+
+
+             // these are derived
+    //punch in method private not void
+        // employee is punched in
+            // returns the employee start time
+
+
+    //punch out method private not void
+    // employee is punched out
+        // calculate hours worked now (get start time - get end time )
+        // calculate total hours worked ( their previous hours + todays hours)
     }
 
