@@ -1,15 +1,14 @@
 package com.pluralsight;
 
 //import scanners
+
 import java.util.Scanner;
 import java.time.LocalDateTime;
-
 
 
 public class Employee {
     //add my scanner name
     Scanner myScanner = new Scanner(System.in);
-
 
 
     //added stored methods
@@ -102,24 +101,23 @@ public class Employee {
     }
 
 
-    // exercise 2
+    ///////////// exercise 2 ///////////////////
 
 
     //add in and define these new methods
-
-    public int punchInStart;
-    public int punchOut;
+    private int punchInStart;
+    private int punchOut;
     //exercise 3
 
 
     // these are derived
     //punch in method private not void
 
-        // employee is punched in
-        public void punchIn(int time) {
-            this.punchInStart = time;
-        }
-            // returns the employee start time
+    // employee is punched in
+    public void punchIn(int time) {
+        this.punchInStart = time;
+    }
+    // returns the employee start time
 
 
     //punch out method private not void
@@ -131,10 +129,11 @@ public class Employee {
         this.hoursWorked += hoursWorkedToday;
 
     }
-    // Exercise 3
 
-//add punch in method no parameters
-    private int punchIn() {
+    //////////////////// Exercise 3 //////////////////////
+
+    //add punch in method no parameters
+    public void punchIn() {
         LocalDateTime now = LocalDateTime.now();
         int hour = now.getHour();
         int minute = now.getMinute();
@@ -144,8 +143,8 @@ public class Employee {
         System.out.printf("%2s Punched in %2d:%2d", getName(), hour, minute);
     }
 
-//add punch out method no parameter
-    private int punchOut() {
+    //add punch out method no parameter
+    public void punchOut() {
         LocalDateTime now = LocalDateTime.now();
         int hour = now.getHour();
         int minute = now.getMinute();
