@@ -1,11 +1,15 @@
 package com.pluralsight;
 
-//import scanner
+//import scanners
 import java.util.Scanner;
+import java.time.LocalDateTime;
+
+
 
 public class Employee {
     //add my scanner name
     Scanner myScanner = new Scanner(System.in);
+
 
 
     //added stored methods
@@ -103,47 +107,52 @@ public class Employee {
 
     //add in and define these new methods
 
-    private int punchIn;
-    private int punchOut;
-
-    //add construtcor
-
-    public Employee(int punchIn, int punchOut) {
-        this.punchIn = punchIn;
-        this.punchOut = punchOut;
-    }
-
-    // add setter
-
-    public void setPunchIn(int time) {
-        this.punchIn = time;
-    }
-
-    public void setPunchOut(int time) {
-        this.punchOut = time;
-    }
+    public int punchInStart;
+    public int punchOut;
+    //exercise 3
 
 
     // these are derived
     //punch in method private not void
 
         // employee is punched in
-        public void PunchIn(int time) {
-            this.punchIn = time;
+        public void punchIn(int time) {
+            this.punchInStart = time;
         }
             // returns the employee start time
 
 
     //punch out method private not void
     // employee is punched out
-    public void PunchOut(int time) {
+    public void punchOut(int time) {
         // calculate hours worked now (get start time - get end time )
-        int hoursWorkedToday = time - this.punchIn;
+        int hoursWorkedToday = time - this.punchInStart;
         // calculate total hours worked ( their previous hours + todays hours)
         this.hoursWorked += hoursWorkedToday;
 
+    }
+    // Exercise 3
 
+//add punch in method no parameters
+    private int punchIn() {
+        LocalDateTime now = LocalDateTime.now();
+        int hour = now.getHour();
+        int minute = now.getMinute();
+        punchIn(hour);
+        //  DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm");
+        //String lastPunchIn = now.format(formatter);
+        System.out.printf("%2s Punched in %2d:%2d", getName(), hour, minute);
     }
 
+//add punch out method no parameter
+    private int punchOut() {
+        LocalDateTime now = LocalDateTime.now();
+        int hour = now.getHour();
+        int minute = now.getMinute();
+        punchOut(hour);
+        //  DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm");
+        //String lastPunchIn = now.format(formatter);
+        System.out.printf("%2s Punched out %2d:%2d", getName(), hour, minute);
     }
+}
 
