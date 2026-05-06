@@ -1,8 +1,14 @@
 package com.pluralsight;
 
-public class Employee {
+//import scanner
+import java.util.Scanner;
 
-//added stored methods
+public class Employee {
+    //add my scanner name
+    Scanner myScanner = new Scanner(System.in);
+
+
+    //added stored methods
     private String employeeID;
     private String name;
     private String department;
@@ -21,7 +27,7 @@ public class Employee {
     }
 
 
-//add getters and setters for each stored
+    //add getters and setters for each stored
     public String getEmployeeID() {
         return employeeID;
     }
@@ -63,20 +69,21 @@ public class Employee {
     }
 
 
-
     //add regular hours
-    public double getRegularHours(){
-       if(this.hoursWorked <= 40){
-        return this.hoursWorked;
-        } return 40;
-}
+    public double getRegularHours() {
+        if (this.hoursWorked <= 40) {
+            return this.hoursWorked;
+        }
+        return 40;
+    }
 
 
     //add overtime hours
     public double getOvertimeHours() {
-        if(this.hoursWorked >= 40){
+        if (this.hoursWorked >= 40) {
             return this.hoursWorked - 40;
-        } return 0;
+        }
+        return 0;
     }
 
 
@@ -88,27 +95,55 @@ public class Employee {
         double overtimeHoursPay = this.getOvertimeHours() * this.payRate * 1.5;
 
         return regularHours + overtimeHoursPay;
-        }
+    }
 
 
-        // exercise 2
+    // exercise 2
+
 
     //add in and define these new methods
 
-            //these are stored
-    // start time int private not void
-    // end time int private not void
+    private int punchIn;
+    private int punchOut;
+
+    //add construtcor
+
+    public Employee(int punchIn, int punchOut) {
+        this.punchIn = punchIn;
+        this.punchOut = punchOut;
+    }
+
+    // add setter
+
+    public void setPunchIn(int time) {
+        this.punchIn = time;
+    }
+
+    public void setPunchOut(int time) {
+        this.punchOut = time;
+    }
 
 
-             // these are derived
+    // these are derived
     //punch in method private not void
+
         // employee is punched in
+        public void PunchIn(int time) {
+            this.punchIn = time;
+        }
             // returns the employee start time
 
 
     //punch out method private not void
     // employee is punched out
+    public void PunchOut(int time) {
         // calculate hours worked now (get start time - get end time )
+        int hoursWorkedToday = time - this.punchIn;
         // calculate total hours worked ( their previous hours + todays hours)
+        this.hoursWorked += hoursWorkedToday;
+
+
+    }
+
     }
 
