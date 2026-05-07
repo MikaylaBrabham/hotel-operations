@@ -29,7 +29,8 @@ public class Hotel {
         this.bookedSuites = bookedSuites;
         this.bookedBasicRooms = bookedBasicRooms;
     }
-// add getters
+
+    // add getters
     public String getName() {
         return name;
     }
@@ -49,7 +50,23 @@ public class Hotel {
     public int getBookedBasicRooms() {
         return bookedBasicRooms;
     }
+
+
+    // add get available suites
+    public int getAvailableSuites() {
+        return this.numberOfSuites - this.bookedSuites;
+    }
+
+    //add get available rooms
+    public int getAvailableRooms() {
+        return this.numberOfRooms - this.bookedBasicRooms;
+    }
+
+
+    //add  public boolean bookroom derived method
+    public boolean bookRoom(int numberOfRooms, boolean isSuite){
+// have to go last because derived from get avaialble suites and rooms mentioned earlier
+    }
+
+
 }
-
-
-
