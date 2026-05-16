@@ -11,5 +11,12 @@ public class HotelOperations {
     }
 }
 
-    // add room class
+// test employee
+
+// test hotel
+
+//test reservation
+
+//test room
+
 
