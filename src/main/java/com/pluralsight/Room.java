@@ -38,31 +38,21 @@ public class Room {
     public boolean isAvailable() {
         //add rule if the room is dirty and occupied it's not available
         // work with the data given and adapt
-        if (this.isDirty() && this.isOccupied()) {
-            return false;
-        } else {
-            return true;
-        }
-
+        return (this.isDirty() && this.isOccupied());
     }
     //Exercise 2
 
 
     // add check in method
     private void checkIn() {
-        //marked occupied: someones still in there
-        this.isOccupied = false;
-        //marked dirty
-        this.isDirty = false;
+        if (isAvailable()) {
+            //marked occupied: someones still in there
+            this.isOccupied = true;
+            //marked dirty
+            this.isDirty = true;
 
+        }
     }
-
-    //add clean room method
-    private void cleanRoom() {
-        // does the room need cleaning
-        this.isDirty = true;
-    }
-
     //add checkout method
     private void CheckOut() {
         // occupied = no
@@ -70,6 +60,15 @@ public class Room {
         //clean = yes
         this.isDirty = true;
     }
+    //add clean room method
+    private void cleanRoom() {
+        if (!this.isOccupied) {
+            // does the room need cleaning
+            this.isDirty = false;
+        }
+    }
+
+
 
 }
 
