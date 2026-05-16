@@ -47,12 +47,12 @@ public class Reservation {
 
     // add prices for different rooms under price
     public double getPrice() {
-        if(this.roomType.contentEquals("king")) {
+        if(this.roomType.equalsIgnoreCase("king")) {
             return 139.00;
-        } else if (this.roomType.contentEquals("double")) {
+        } else if (this.roomType.equalsIgnoreCase("double")) {
             return 124.00;
-
         }
+        return 0.00;
     }
 
     // get reservation total
