@@ -66,6 +66,24 @@ public class Hotel {
     //add  public boolean bookroom derived method
     public boolean bookRoom(int numberOfRooms, boolean isSuite){
 // have to go last because derived from get avaialble suites and rooms mentioned earlier
+        // determine if any suites available
+        //if suite is true check the get avliable suites
+        if(isSuite){
+            if (numberOfRooms <= getAvailableRooms()) {
+                this.bookedSuites += numberOfRooms;
+                return true;
+            }
+            //if is suite false they want a basic room so check getavaialbel rooms
+        }else {
+            if (numberOfRooms <= getAvailableRooms()) {
+                this.bookedBasicRooms += numberOfRooms;
+                return true;
+            }
+        }
+        // if theres not enough rooms return false
+        return false;
+
+
     }
 
 
