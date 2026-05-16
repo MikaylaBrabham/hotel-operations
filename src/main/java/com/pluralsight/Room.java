@@ -44,7 +44,7 @@ public class Room {
 
 
     // add check in method
-    private void checkIn() {
+    public void checkIn() {
         if (isAvailable()) {
             //marked occupied: someones still in there
             this.isOccupied = true;
@@ -54,14 +54,14 @@ public class Room {
         }
     }
     //add checkout method
-    private void CheckOut() {
+    public void checkOut() {
         // occupied = no
         this.isOccupied = false;
         //clean = yes
         this.isDirty = true;
     }
     //add clean room method
-    private void cleanRoom() {
+    public void cleanRoom() {
         if (!this.isOccupied) {
             // does the room need cleaning
             this.isDirty = false;
